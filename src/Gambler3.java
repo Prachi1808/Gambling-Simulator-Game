@@ -1,32 +1,22 @@
-import java.util.Random;
 import java.util.Scanner;
 
-public class Gambler2 
+public class Gambler3
 {
-	
-public static void main(String[] args)
+
+	public static void main(String[] args) 
 {
-	Scanner inputScanner = new Scanner(System.in);
-	System.out.println("Enter the gambler stake");
-	
-	int stake  =  inputScanner.nextInt();    // gambler's stating 
-	
-	System.out.println("Enter the gambler goal");
-	int goal   = inputScanner.nextInt();   // gambler's goal 
-	
-	System.out.println("Enter the gambler bet");
-	
-	int trial =  inputScanner.nextInt() ;    // gambler's bet
+		int stake  = Integer.parseInt(args[0]);    // gambler's stating 
+	    int goal   = Integer.parseInt(args[1]);    // gambler's desired 
+	    int trial = Integer.parseInt(args[2]);    // number of trial to perform
+		Scanner sc = new Scanner(System.in);
 		
-	Random r = new Random();
-	int randomnum = r.nextInt(2);
-	
-	
+		
 	    System.out.println("Enter the gambler");
 	     
 	    int st =100;        // 100rs everyday
 	    int bets = 1;       // total number of bets 
 	    int wins = 0;        // total number of games won
+	    int loose =0;       //total number of game loose
 
 	     // repeat trials times
 	     for (int t = 0; t < trial; t++) {
@@ -44,8 +34,11 @@ public static void main(String[] args)
        }
          if (cash == goal) wins++;           
      
-	     
+         if
+        	 (cash == goal) loose--;
 	     
 	}
 
+
 }
+
